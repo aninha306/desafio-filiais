@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: 300,
     height: 300,
     borderRadius: 500,
-    marginBottom: 30
+    marginBottom: 30,
   },
   imagemm: {
     width: 197,
