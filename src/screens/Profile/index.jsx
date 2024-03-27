@@ -22,7 +22,7 @@ export default function Profile({ route }) {
           <Text style={styles.text}>{data.address.state}</Text>
         </View>
         <View style={styles.redes}>
-        
+
           <Image source={require('../../../assets/redess.png')} style={styles.imagemm} />
         </View>
       </View>
