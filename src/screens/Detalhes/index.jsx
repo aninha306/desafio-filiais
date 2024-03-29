@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -6,9 +7,13 @@ import Title from "../../components/Title";
 
 import Cadastros from "../../models/cadastros";
 
-export default function Detalhes({ route }) {
+export default function Detalhes({ route, data }) {
   const navigation = useNavigation();
   const { user } = route.params;
+
+  if (!user) {
+    return <Text style={styles.msg}>Tela de detalhe vazia, selecione uma filial na lista.</Text>;
+  }
 
   const editUser = () => {
     navigation.navigate("Filiais", { user: user, edit: true });
@@ -21,14 +26,8 @@ export default function Detalhes({ route }) {
 
   return (
     <View style={styles.container}>
-      <Title title="Filiais" />
-
-      {data ? (
-        <Text>Detalhes da filial</Text>
-      ) : (
-        <Text>Selecione uma filial para exibir seus detalhes</Text>
-      )}
-
+      <Title title="Detalhes" />
+      <Text style={styles.txt}>Tela de detalhe da filial selecionada na lista</Text>
       <View style={styles.user}>
         <View style={styles.userDetail}>
           <Text style={styles.text}>{user.nome}</Text>

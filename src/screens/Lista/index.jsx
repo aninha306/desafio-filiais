@@ -39,11 +39,12 @@ export default function Lista() {
                   <Text style={styles.txt}>Detalhes</Text>
                 </TouchableOpacity>
               </View>
+              
             </View>
           ))}
         </View>
       ) : (
-        <Text>Não há filiais cadastradas</Text>
+        <Text  style={styles.txt}>Não há filiais cadastradas</Text>
       )}
     </View>
   );

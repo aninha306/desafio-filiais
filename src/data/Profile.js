@@ -1,4 +1,4 @@
-export const user = {
+export const perfil = {
   name: "Ana Ju Pontes",
   email: "anamondinip@gmail.com",
   desc: "Aluna do Senai",

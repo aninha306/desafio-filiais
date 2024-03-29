@@ -4,18 +4,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginTop: 50,
+    backgroundColor: "#07396b"
   },
   button: {
     marginTop: 20,
     padding: 10,
-    backgroundColor: "#C9D4FF",
+    backgroundColor: "#afcdea",
     borderRadius: 5,
   },
   user: {
     marginTop: 20,
     padding: 10,
-    backgroundColor: "#C9D4FF",
+    backgroundColor: "#afcdea",
+    opacity: 0.7,
     borderRadius: 5,
   },
   userDetail: {
@@ -42,8 +43,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   text: {
-    fontSize: 16,
+    fontSize: 18,
+    color: "#07396b"
   },
+  msg: {
+    fontSize: 25,
+    textAlign: "center",
+    color: "#07396b",
+    marginTop: 400,
+    marginLeft: 10,
+    marginRight: 10
+  },
+  txt: {
+    fontSize: 18,
+    color: "#afcdea",
+    margin: 30,
+    marginBottom: 30
+  }
 });
 
 export default styles;

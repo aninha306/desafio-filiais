@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#afcdea",
-    fontSize: 18,
+    fontSize: 20,
     margin: 30,
     marginBottom: 50
   },
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
   txt: {
     fontSize: 18,
     color: "#afcdea"
-  }
+  },
+  
 });
 
 export default styles;

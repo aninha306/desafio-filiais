@@ -3,9 +3,11 @@ import { Feather } from "@expo/vector-icons";
 
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
-import { user } from "../data/Profile";
+import { perfil } from "../data/Profile";
 import Filiais from "../screens/Filiais";
 import Lista from "../screens/Lista";
+import Detalhes from "../screens/Detalhes";
+import { user } from "../data/Escola";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +17,7 @@ const TabRoutes = () => {
       <Tab.Screen
         name="Profile"
         component={Profile}
-        initialParams={{ data: user }}
+        initialParams={{ data: perfil }}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather
@@ -61,7 +63,7 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "black",
         }}
       />
-       <Tab.Screen
+      <Tab.Screen
         name="Lista"
         component={Lista}
         options={{
@@ -77,7 +79,23 @@ const TabRoutes = () => {
           tabBarInactiveTintColor: "black",
         }}
       />
-
+      <Tab.Screen
+        name="Detalhes"
+        component={Detalhes}
+        initialParams={{ data: user }}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="clipboard"
+              size={24}
+              color={focused ? "black" : "grey"}
+            />
+          ),
+          tabBarLabel: "Detalhes",
+          tabBarActiveTintColor: "black",
+          tabBarInactiveTintColor: "black",
+        }}
+      />
     </Tab.Navigator>
   );
 };
