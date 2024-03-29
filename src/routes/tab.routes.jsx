@@ -40,7 +40,7 @@ const TabRoutes = () => {
               color={focused ? "black" : "grey"}
             />
           ),
-          tabBarLabel: "Inicial",
+          tabBarLabel: "Home",
           tabBarActiveTintColor: "black",
           tabBarInactiveTintColor: "black",
         }}

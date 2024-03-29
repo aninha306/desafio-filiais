@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View, Image} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
 
@@ -8,7 +8,7 @@ import Cadastro from "../../models/cadastro";
 import Cadastros from "../../models/cadastros";
 import { user } from "../../data/Escola";
 
-export default function Form({ route }) {
+export default function Filiais({ route }) {
     let edit = route.params;
 
     const [nome, setName] = useState("");
@@ -63,53 +63,57 @@ export default function Form({ route }) {
 
     return (
         <View style={styles.container}>
-            <Title title={isUpdate ? "Editar" : "Nova Filial"} />
-            <TextInput
-                placeholder="Digite o nome da Filial"
-                style={styles.userInput}
-                onChangeText={setName}
-                value={nome}
-            />
-            <TextInput
-                placeholder="Digite o email"
-                style={styles.userInput}
-                onChangeText={setEmail}
-                value={email}
-            />
-            <TextInput
-                placeholder="Digite o nome do responsável"
-                style={styles.userInput}
-                onChangeText={setResp}
-                value={responsavel}
-            />
-            <TextInput
-                placeholder="Digite o telefone"
-                style={styles.userInput}
-                onChangeText={setTel}
-                value={telefone}
-            />
-            <TextInput
-                placeholder="Digite o endereço"
-                style={styles.userInput}
-                onChangeText={setEnder}
-                value={endereco}
-            />
-            <TextInput
-                placeholder="Digite a quantidade de turmas"
-                style={styles.userInput}
-                onChangeText={setTurmas}
-                value={turmas}
-            />
-            <TextInput
-                placeholder="Digite a quantidade de funcionários"
-                style={styles.userInput}
-                onChangeText={setFunc}
-                value={funcionarios}
-            />
+            <Title title={isUpdate ? "Editar" : "Cadastre Filiais"} />
+            <View style={styles.cont}>
+                <TextInput
+                    placeholder="Nome da Filial"
+                    style={styles.userInput}
+                    onChangeText={setName}
+                    value={nome}
+                />
+                <TextInput
+                    placeholder="Digite o email"
+                    style={styles.userInput}
+                    onChangeText={setEmail}
+                    value={email}
+                />
+                <TextInput
+                    placeholder="Nome do responsável"
+                    style={styles.userInput}
+                    onChangeText={setResp}
+                    value={responsavel}
+                />
+                <TextInput
+                    placeholder="Digite o telefone"
+                    style={styles.userInput}
+                    onChangeText={setTel}
+                    value={telefone}
+                />
+                <TextInput
+                    placeholder="Digite o endereço"
+                    style={styles.userInput}
+                    onChangeText={setEnder}
+                    value={endereco}
+                />
+                <TextInput
+                    placeholder="Quantidade de turmas"
+                    style={styles.userInput}
+                    onChangeText={setTurmas}
+                    value={turmas}
+                />
+                <TextInput
+                    placeholder="Número de funcionários"
+                    style={styles.userInput}
+                    onChangeText={setFunc}
+                    value={funcionarios}
+                />
 
-            <TouchableOpacity style={styles.button} onPress={handleUserAction}>
-                <Text>{isUpdate ? "Salvar Alterações" : "Criar Filial"}</Text>
-            </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={handleUserAction}>
+                    <Text style={styles.txt}>{isUpdate ? "Salvar Alterações" : "Criar Filial"}</Text>
+                </TouchableOpacity>
+            </View>
+            <Image source={require('../../../assets/livroo.png')} style={styles.imagemm} />
+
 
             {isUpdate && (
                 <TouchableOpacity style={styles.button} onPress={clearInputs}>

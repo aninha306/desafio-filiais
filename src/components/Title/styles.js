@@ -2,9 +2,11 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color:"#07396b"
+    fontSize: 40,
+    color: "#afcdea",
+    marginTop: 30, 
+    fontFamily: "Cochin",
+    textAlign: "center"
   },
 });
 

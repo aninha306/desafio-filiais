@@ -14,7 +14,7 @@ export default function Profile({ route }) {
         <Text style={styles.texto}>Perfil</Text>
         <Image source={require('../../../assets/ana ju.jpg')} style={styles.imagem} />
         <View style={styles.user}>
-          <Title title="Desenvolvedora" />
+          <Text style={styles.titulo}>Desenvolvedora</Text>
           <Text style={styles.text}>{data.name}</Text>
           <Text style={styles.text}>{data.email}</Text>
           <Text style={styles.text}>{data.desc}</Text>

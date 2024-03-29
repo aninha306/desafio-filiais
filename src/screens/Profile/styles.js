@@ -32,9 +32,13 @@ const styles = StyleSheet.create({
     marginBottom: 30
   },
   imagemm: {
-    width: 197,
-    height: 197,
+    width: 196,
+    height: 196,
   },
+  titulo: {
+    fontSize: 25,
+    color: "#07396b",
+  }
 });
 
 export default styles;
