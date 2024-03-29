@@ -1,0 +1,8 @@
+![perfil - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/193be803-bf17-41ce-86e4-993e5bc55429)
+![home - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/1d6ab8d8-13b8-4919-a9de-af46b02691a8)
+![pagina de cadastro - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/39eb7e80-c8ea-4800-83b8-4be9304b0751)
+![adicionando uma filial - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/e3639300-d854-4b67-a0e1-4142ed7eae7a)
+![lista de filiais - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/a27ff727-3194-4503-89b6-633e259d63e4)
+![detalhe da filial adicionada  - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/73490ea1-844c-4959-8d6f-cebc005d2a05)
+![pagina de editar - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/18992447-6cfb-4973-bc71-19cbd43c0816)
+![pagina de detalhe aviso - desafio filiais](https://github.com/aninha306/desafio-filiais/assets/124887301/eaadef94-c0eb-4a05-baab-98598ffb90a7)
