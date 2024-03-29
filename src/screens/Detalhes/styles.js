@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
     color: "#afcdea",
     margin: 30,
     marginBottom: 30
-  }
+  },
+  
 });
 
 export default styles;

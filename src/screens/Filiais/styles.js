@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   cont: {
     color: "#07396b",
-    marginTop:40,
+    marginTop:30,
     backgroundColor: "#afcdea",
     opacity: 0.5,
     borderRadius:5, 
@@ -34,8 +34,13 @@ const styles = StyleSheet.create({
   imagemm: {
     width:100,
     height:100,
-    marginTop: 45
+    marginTop: 25
   },
+  but: {
+    fontSize: 18,
+    color: "#afcdea",
+    textAlign: "center"
+  }
 });
 
 export default styles;

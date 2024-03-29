@@ -111,15 +111,16 @@ export default function Filiais({ route }) {
                 <TouchableOpacity style={styles.button} onPress={handleUserAction}>
                     <Text style={styles.txt}>{isUpdate ? "Salvar Alterações" : "Criar Filial"}</Text>
                 </TouchableOpacity>
+                {isUpdate && (
+                <TouchableOpacity style={styles.button} onPress={clearInputs}>
+                    <Text style={styles.but}>Cancelar Edição</Text>
+                </TouchableOpacity>
+            )}
             </View>
             <Image source={require('../../../assets/livroo.png')} style={styles.imagemm} />
 
 
-            {isUpdate && (
-                <TouchableOpacity style={styles.button} onPress={clearInputs}>
-                    <Text>Cancelar Edição</Text>
-                </TouchableOpacity>
-            )}
+            
         </View>
     );
 }
