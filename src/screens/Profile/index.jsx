@@ -15,11 +15,11 @@ export default function Profile({ route }) {
         <Image source={require('../../../assets/ana ju.jpg')} style={styles.imagem} />
         <View style={styles.user}>
           <Text style={styles.titulo}>Desenvolvedora</Text>
-          <Text style={styles.text}>{data.name}</Text>
-          <Text style={styles.text}>{data.email}</Text>
-          <Text style={styles.text}>{data.desc}</Text>
-          <Text style={styles.text}>{data.address.city}</Text>
-          <Text style={styles.text}>{data.address.state}</Text>
+          <Text style={styles.text}><Text style={styles.desc}>Nome: </Text>{data.name}</Text>
+          <Text style={styles.text}><Text style={styles.desc}>Email:</Text> {data.email}</Text>
+          <Text style={styles.text}><Text style={styles.desc}>Descrição:</Text> {data.desc}</Text>
+          <Text style={styles.text}><Text style={styles.desc}>Cidade:</Text> {data.address.city}</Text>
+          <Text style={styles.text}><Text style={styles.desc}>Estado:</Text> {data.address.state}</Text>
         </View>
         <View style={styles.redes}>
 

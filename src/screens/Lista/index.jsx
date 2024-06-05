@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View , ScrollView} from "react-native";
 import { useNavigation, useIsFocused } from "@react-navigation/native";
 
 import styles from "./styles";
@@ -34,7 +34,7 @@ export default function Lista() {
               <View style={styles.userActions}>
                 <TouchableOpacity
                   style={styles.detailsButton}
-                  onPress={() => navigation.navigate("Detalhes", { user: user })}
+                  onPress={() => navigation.navigate("Detalhes", { data : user })}
                 >
                   <Text style={styles.txt}>Detalhes</Text>
                 </TouchableOpacity>

@@ -50,6 +50,7 @@ const TabRoutes = () => {
       <Tab.Screen
         name="Filiais"
         component={Filiais}
+        initialParams={{ edit: false, user: null }}
         options={{
           tabBarIcon: ({ focused }) => (
             <Feather

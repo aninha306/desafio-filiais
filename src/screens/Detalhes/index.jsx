@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View , ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
@@ -7,36 +7,38 @@ import Title from "../../components/Title";
 
 import Cadastros from "../../models/cadastros";
 
-export default function Detalhes({ route, data }) {
+export default function Detalhes({ route }) {
   const navigation = useNavigation();
-  const { user } = route.params;
+  const { data } = route.params;
 
-  if (!user) {
-    return <Text style={styles.msg}>Tela de detalhe vazia, selecione uma filial na lista.</Text>;
-  }
 
   const editUser = () => {
-    navigation.navigate("Filiais", { user: user, edit: true });
+    navigation.navigate("Filiais", { user: data, edit: true });
   };
 
   const deleteUser = () => {
-    Cadastros.remove(user.id);
+    Cadastros.remove(data.id);
     navigation.navigate("Lista");
   };
 
   return (
     <View style={styles.container}>
-      <Title title="Detalhes" />
-      <Text style={styles.txt}>Tela de detalhe da filial selecionada na lista</Text>
+     
+      {data ? (
+         <Title title="Detalhes" />
+      ) : (
+        <Text style={styles.txt}>Selecione uma filial para exibir seus detalhes</Text>
+
+      )}
       <View style={styles.user}>
         <View style={styles.userDetail}>
-          <Text style={styles.text}>{user.nome}</Text>
-          <Text style={styles.text}>{user.email}</Text>
-          <Text style={styles.text}>{user.responsavel}</Text>
-          <Text style={styles.text}>{user.telefone}</Text>
-          <Text style={styles.text}>{user.endereco}</Text>
-          <Text style={styles.text}>{user.turmas}</Text>
-          <Text style={styles.text}>{user.funcionarios}</Text>
+          <Text style={styles.text}>{data.nome}</Text>
+          <Text style={styles.text}>{data.email}</Text>
+          <Text style={styles.text}>{data.responsavel}</Text>
+          <Text style={styles.text}>{data.telefone}</Text>
+          <Text style={styles.text}>{data.endereco}</Text>
+          <Text style={styles.text}>{data.turmas}</Text>
+          <Text style={styles.text}>{data.funcionarios}</Text>
         </View>
 
         <View style={styles.userActions}>

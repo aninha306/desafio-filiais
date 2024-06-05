@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View, Image} from "react-native";
+import { Text, TextInput, TouchableOpacity, View, Image, ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
 
@@ -6,10 +6,10 @@ import styles from "./styles";
 import Title from "../../components/Title";
 import Cadastro from "../../models/cadastro";
 import Cadastros from "../../models/cadastros";
-import { user } from "../../data/Escola";
+
 
 export default function Filiais({ route }) {
-    let edit = route.params;
+    let { edit, user } = route.params;
 
     const [nome, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -18,13 +18,14 @@ export default function Filiais({ route }) {
     const [endereco, setEnder] = useState("");
     const [turmas, setTurmas] = useState("");
     const [funcionarios, setFunc] = useState("");
+
     const [isUpdate, setIsUpdate] = useState(edit);
 
     const navigation = useNavigation();
 
     useEffect(() => {
         if (edit) {
-            setName(user.name);
+            setName(user.nome);
             setEmail(user.email);
             setResp(user.responsavel);
             setTel(user.telefone);
@@ -62,6 +63,7 @@ export default function Filiais({ route }) {
     };
 
     return (
+        <ScrollView>
         <View style={styles.container}>
             <Title title={isUpdate ? "Editar" : "Cadastre Filiais"} />
             <View style={styles.cont}>
@@ -111,16 +113,19 @@ export default function Filiais({ route }) {
                 <TouchableOpacity style={styles.button} onPress={handleUserAction}>
                     <Text style={styles.txt}>{isUpdate ? "Salvar Alterações" : "Criar Filial"}</Text>
                 </TouchableOpacity>
+
                 {isUpdate && (
                 <TouchableOpacity style={styles.button} onPress={clearInputs}>
                     <Text style={styles.but}>Cancelar Edição</Text>
                 </TouchableOpacity>
             )}
+            
             </View>
             <Image source={require('../../../assets/livroo.png')} style={styles.imagemm} />
 
 
             
         </View>
+        </ScrollView>
     );
 }

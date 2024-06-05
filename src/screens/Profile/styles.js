@@ -12,11 +12,13 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "#afcdea",
     borderRadius: 5,
-    opacity: 0.7
+    opacity: 0.7,
+    width: 260
   },
   text: {
     fontSize: 16,
     color: "#07396b",
+    textAlign: "center"
 
   },
   texto: {
@@ -38,6 +40,14 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 25,
     color: "#07396b",
+    marginBottom: 8,
+    textAlign: "center"
+  },
+  desc: {
+    fontSize: 18,
+    color: "#07396b",
+    textAlign: "center"
+
   }
 });
 
